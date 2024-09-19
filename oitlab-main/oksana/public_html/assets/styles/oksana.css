@@ -1,0 +1,303 @@
+/* Змінні CSS для легкого управління стилями */
+:root {
+  --primary-color: #333;
+  --secondary-color: #aff0e4;
+  --background-color: #f8f9fa;
+  --font-family: 'Montserrat', sans-serif;
+  --font-size: 1rem;
+  --card-bg-color: #fff;
+  --card-border-color: #ddd;
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --btn-hover-bg-color: #aff0e4;
+  --breadcrumb-active-color: #555;
+  --btn-text-color: #fff;
+  --read-more-color: #67ddc7;
+}
+a{
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: var(--secondary-color);
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 20px;
+}
+
+.navbar-nav .nav-item a {
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 10px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-nav .nav-item a:hover {
+  background-color: var(--text-color);
+  color: var(--btn-text-color);
+}
+
+/* Button styles */
+.btn {
+  padding: 8px 12px;
+  background-color: var(--btn-bg-color);
+  color: var(--btn-text-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--btn-hover-bg-color);
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  padding: 0;
+  background-color: transparent;
+  text-align: center;
+}
+
+.breadcrumb-title {
+  padding: 0;
+  background-color: transparent;
+  text-align: center;
+}
+
+.breadcrumb-item {
+  font-size: 16px;
+}
+
+.breadcrumb-item.active {
+  font-weight: bold;
+  color: var(--breadcrumb-active-color);
+}
+
+/* Feature posts styling */
+.feature-posts {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.feature-posts img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease; 
+  border-radius: 10px;
+}
+
+.feature-posts img:hover {
+  transform: scale(1.1); 
+  filter: brightness(1.2); 
+}
+
+/* Card styles */
+.card {
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--card-border-color);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: var(--card-shadow);
+}
+
+.card-header {
+  /* padding: 15px; */
+  background-color: var(--card-bg-color);
+  border-bottom: 1px solid var(--card-border-color);
+}
+
+.card-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-body img {
+  display: block;
+  margin: 0 auto;
+  max-width: 80%;
+  height: auto;
+  border-radius: 5px;
+  align-items: center;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.card-footer {
+  padding: 15px;
+  background-color: var(--card-bg-color);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Card images */
+.blog-media img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Adjust cards to be on the same row */
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Text size adjustments for Wintour and Birkin */
+.card-text .wintour, .card-text .birkin {
+  font-size: 0.75rem;
+  margin-bottom: 5px;
+}
+
+.read-more-btn {
+  color: var(--read-more-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  color: var(--text-color);
+}
+
+/* Container styling */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+/* Specific sections styling */
+.page-container {
+  padding: 20px;
+}
+
+.card-body img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Related posts section */
+h6 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-btn-primary {
+  color: var(--breadcrumb-active-color);
+  background-color: var(--secondary-color);
+  margin: 20px;
+  height: 40px;
+  width: 100px;
+  border-radius: 5px;
+}
+
+.btn-btn-secondary {
+  color: var( --card-border-color);
+  background-color: var(--breadcrumb-active-color);
+  margin: 20px;
+  height: 40px;
+  width: 100px;
+  border-radius: 5px;
+}
+
+.btn-group {
+  display: flex;
+}
+
+.col-md-6, .col-lg-4 {
+  flex: 1 0 30%;
+  padding: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .feature-post-item {
+    width: 48%;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 576px) {
+  .feature-post-item {
+    width: 100%;
+  }
+}
